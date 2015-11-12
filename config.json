@@ -6,9 +6,13 @@
       "groups": ["Apartment"],
       "hue": 9646
     },
-    "blue": {
+    "halsey": {
       "groups": ["Apartment"],
       "hue": 46920
+    },
+    "hell": {
+      "groups": ["Apartment"],
+      "hue": 0
     }
   }
 }
