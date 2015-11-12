@@ -32,7 +32,7 @@ def apply_preset(req):
     preset = conf.presets.get(preset_name)
     if preset:
         conf.groups.get(preset['groups'][0]).hue = preset['hue']
-    return _format_response("Switching...")
+    return _format_response("Switching to {}".format(preset_name))
 
 
 @app.route('/echolight', methods=['POST'])
