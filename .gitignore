@@ -1,5 +1,4 @@
 *.pyc
 __pycache__
 *.egg-info
-config.json
 .env/

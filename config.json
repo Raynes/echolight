@@ -1,0 +1,14 @@
+{
+  "username": "REDACTED",
+  "ip": "192.168.1.237",
+  "presets": {
+    "sunset": {
+      "groups": ["Apartment"],
+      "hue": 9646
+    },
+    "blue": {
+      "groups": ["Apartment"],
+      "hue": 46920
+    }
+  }
+}
