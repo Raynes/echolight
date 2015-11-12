@@ -1,0 +1,3 @@
+ApplyPreset switch to {PresetName}
+ApplyPreset set {PresetName}
+ApplyPreset apply {PresetName}

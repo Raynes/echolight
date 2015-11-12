@@ -1,0 +1,13 @@
+{
+  "intents": [
+    {
+      "intent": "ApplyPreset",
+      "slots": [
+        {
+          "name": "PresetName",
+          "type": "PresetName"
+        }
+      ]
+    }
+  ]
+}
