@@ -28,7 +28,7 @@ def _format_response(message):
 
 def apply_preset(req):
     print(req)
-    preset_name = req["intent"]["slots"]["PresetName"]["value"]
+    preset_name = req["intent"]["slots"]["PresetName"]["value"].lower()
     preset = conf.presets.get(preset_name)
     if preset:
         conf.groups.get(preset['groups'][0]).hue = preset['hue']
