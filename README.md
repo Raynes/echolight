@@ -30,7 +30,8 @@ Echolight works on presets, so you'll want a config file that looks like this:
   "presets": {
     "sunset": {
       "groups": ["Apartment"],
-      "hue": 9646
+      "hue": 9646,
+      "brightness": 180
     },
     "halsey": {
       "groups": ["Apartment"],

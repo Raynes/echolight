@@ -4,7 +4,8 @@
   "presets": {
     "sunset": {
       "groups": ["Apartment"],
-      "hue": 9646
+      "hue": 9646,
+      "brightness": 180
     },
     "halsey": {
       "groups": ["Apartment"],
