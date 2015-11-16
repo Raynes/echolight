@@ -32,8 +32,12 @@ def apply_preset(req):
     preset_name = req["intent"]["slots"]["PresetName"]["value"].lower()
     preset = conf.presets.get(preset_name)
     if preset:
-        conf.groups.get(preset['groups'][0]).hue = preset['hue']
-        return _format_response("Switching to {}".format(preset_name))
+        for group in conf.groups.get(preset['groups']):
+            group.on = True
+            group.hue = preset['hue']
+            group.brightness = preset.get('brightness', 254)
+            group.saturation = preset.get('saturation', 25)
+        return _format_response("Switched to {}".format(preset_name))
     else:
         return _format_response("Preset not found")
 
