@@ -15,7 +15,7 @@ $ python -m echolight
 ```
 
 You can turn debug mode on by passing a `-d` option, and change the default
-port (`8183`) with `-p`.
+port (`8184`) with `-p`.
 
 ## Config
 

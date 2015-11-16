@@ -60,7 +60,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=description)
     parser.add_argument('-p', '--port',
                         type=int,
-                        default=8185,
+                        default=8184,
                         help="Port to run the server on.")
     parser.add_argument('-d', '--debug', action='store_true')
     args = parser.parse_args()
