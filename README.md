@@ -21,7 +21,7 @@ port (`8184`) with `-p`.
 
 Echolight works on presets, so you'll want a config file that looks like this:
 
-#### config.json
+**config.json**
 
 ```json
 {
@@ -47,3 +47,11 @@ Echolight works on presets, so you'll want a config file that looks like this:
 
 This is my own personal config, so you'll probably want to tweak it. For
 example, some people don't much like their apartment to have a 'hell' setting.
+
+
+## Reloading Configuration
+
+You can reload configuration at runtime by asking it to "reload config" or
+"reload configuration". This'll cause it to re-read `config.json`. It
+will not automatically update the current preset, you'll have to tell it
+to set it again to get the changes reflected in reality.
