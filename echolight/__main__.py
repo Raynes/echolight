@@ -38,7 +38,7 @@ def apply_preset(req):
                 group.on = True
                 group.hue = preset['hue']
                 group.brightness = preset.get('brightness', 254)
-                group.saturation = preset.get('saturation', 200)
+                group.saturation = preset.get('saturation', 254)
             else:
                 return _format_response(
                     "Failed to find group {}".format(group_name)
