@@ -1,3 +1,4 @@
+import argparse
 from echolight.config import EcholightConfig
 import flask
 
@@ -5,8 +6,8 @@ app = flask.Flask('echolight')
 conf = EcholightConfig()
 
 
-def server():
-    app.run('0.0.0.0', 8184, debug=True)
+def server(port, debug):
+    app.run('0.0.0.0', port, debug)
 
 
 def _format_response(message):
@@ -55,4 +56,12 @@ def dispatch_request():
     return 'NO.', 400
 
 if __name__ == '__main__':
-    server()
+    description = "Presets for hue light groups, controlled via Amazon Echo"
+    parser = argparse.ArgumentParser(description=description)
+    parser.add_argument('-p', '--port',
+                        type=int,
+                        default=8185,
+                        help="Port to run the server on.")
+    parser.add_argument('-d', '--debug', action='store_true')
+    args = parser.parse_args()
+    server(args.port, args.debug)
