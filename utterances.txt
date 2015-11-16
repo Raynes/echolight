@@ -1,3 +1,5 @@
 ApplyPreset switch to {PresetName}
 ApplyPreset set {PresetName}
 ApplyPreset apply {PresetName}
+ReloadConfig reload config
+ReloadConfig reload configuration

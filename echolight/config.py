@@ -4,9 +4,13 @@ from phue import Bridge
 
 class EcholightConfig:
     def __init__(self, conf="config.json"):
+        self._conf_file = conf
         self._bridge = None
         self._groups = None
-        with open(conf, 'r') as f:
+        self.load_config()
+
+    def load_config(self):
+        with open(self._conf_file, 'r') as f:
             self._conf = json.load(f)
 
     @property

@@ -48,6 +48,15 @@ def apply_preset(req):
         return _format_response("Preset not found")
 
 
+def reload_config(req):
+    try:
+        conf.load_config()
+        return _format_response("Reloaded configuration")
+    except Exception as e:
+        print(e.message)
+        return _format_response("Failed to reload configuration")
+
+
 @app.route('/echolight', methods=['POST'])
 def dispatch_request():
     body = flask.request.get_json()
@@ -58,6 +67,7 @@ def dispatch_request():
 
     intent_handler = {
         'ApplyPreset': apply_preset,
+        'ReloadConfig': reload_config
     }.get(req['intent']['name'])
 
     if intent_handler:
